@@ -39,19 +39,6 @@ submit_click.forEach(function(submit_click_form){
     });
 });
 
-var heart=document.querySelector(".fa-heart");
-heart.addEventListener('click',function(){
-   heart.classList.toggle('heart');
-});
-
-
-var share=document.querySelector(".fa-share-alt");
-share.addEventListener('click',function(){
-   share.classList.toggle('share');
-});
-
-
-
 function updateform(){
     main_form.forEach(function(mainform_number){
         mainform_number.classList.remove('active');
@@ -105,10 +92,10 @@ function validateform(){
 }
 
 //variables à récupérer
-const niveau = document.getElementById('lvl');
+var niveau = document.getElementById('lvl');
 const mois_obt = document.getElementById('mois');
 const annee_obt = document.getElementById('annee');
-const prenom = document.getElementById('prenom');
+var prenom = document.getElementById('prenom');
 const nom = document.getElementById('nom');
 const sexe = document.getElementById('genre');
 const date_naissance = document.getElementById('date_nais');
@@ -124,14 +111,15 @@ const lieu_resid = document.getElementById('lieu_residence');
 const lieu_ret = document.getElementById('lieu_retrait');
 
 //variables à afficher
-const out1 = document.getElementById('output1');
-const out3 = document.getElementById('output3');
+var out1 = document.getElementById('output1');
+var out3 = document.getElementById('output3');
 
 function ajouter(){
     out1.innerHTML = niveau.value;
     out3.innerHTML = prenom.value;
 }
 
+var next_btn2 = document.querySelectorAll(".next_btn2");
 next_btn2.addEventListener('click',ajouter);
 
 

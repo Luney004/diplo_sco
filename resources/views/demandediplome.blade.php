@@ -132,7 +132,7 @@
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button class="next_button">Suivant</button>
+                                <button id="next_btn1" class="next_button">Suivant</button>
                             </div>
                         </div>
 
