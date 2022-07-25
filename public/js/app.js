@@ -105,7 +105,7 @@ function validateform(){
 }
 
 //variables à récupérer
-var niveau = document.getElementById('lvl');
+const niveau = document.getElementById('lvl');
 const mois_obt = document.getElementById('mois');
 const annee_obt = document.getElementById('annee');
 const prenom = document.getElementById('prenom');
@@ -124,9 +124,14 @@ const lieu_resid = document.getElementById('lieu_residence');
 const lieu_ret = document.getElementById('lieu_retrait');
 
 //variables à afficher
-var out1 = document.getElementById('output1');
-var out3 = document.getElementById('output3');
+const out1 = document.getElementById('output1');
+const out3 = document.getElementById('output3');
 
-// attribuer les valeurs
+function ajouter(){
     out1.innerHTML = niveau.value;
     out3.innerHTML = prenom.value;
+}
+
+next_btn2.addEventListener('click',ajouter);
+
+
