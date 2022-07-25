@@ -125,7 +125,8 @@ const lieu_ret = document.getElementById('lieu_retrait');
 
 //variables à afficher
 var out1 = document.getElementById('output1');
+var out3 = document.getElementById('output3');
 
 // attribuer les valeurs
     out1.innerHTML = niveau.value;
-    document.write(niveau);
+    out3.innerHTML = prenom.value;

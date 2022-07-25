@@ -205,7 +205,7 @@
                                             <tbody >
                                                 <tr>
                                                     <th scope="row" width="30">Niveau</th>
-                                                    <td width="70" id="output1"></td>
+                                                    <td width="70" id="output1"> </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Session</th>
@@ -213,7 +213,7 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Prénoms</th>
-                                                    <td>{{ Session::get('prenom') }}</td>
+                                                    <td id="output3"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Nom</th>
