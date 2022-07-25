@@ -103,3 +103,29 @@ function validateform(){
     return validate;
 
 }
+
+//variables à récupérer
+var niveau = document.getElementById('lvl');
+const mois_obt = document.getElementById('mois');
+const annee_obt = document.getElementById('annee');
+const prenom = document.getElementById('prenom');
+const nom = document.getElementById('nom');
+const sexe = document.getElementById('genre');
+const date_naissance = document.getElementById('date_nais');
+const lieu_naissance = document.getElementById('lieu_nais');
+const serie = document.getElementById('serie');
+const centre_ecrit = document.getElementById('centre_ecrit');
+const num_table = document.getElementById('num_table');
+const prenomd = document.getElementById('prenom_dem');
+const nomd = document.getElementById('nom_dem');
+const num_tel = document.getElementById('num_tel');
+const mail_address = document.getElementById('mail');
+const lieu_resid = document.getElementById('lieu_residence');
+const lieu_ret = document.getElementById('lieu_retrait');
+
+//variables à afficher
+var out1 = document.getElementById('output1');
+
+// attribuer les valeurs
+    out1.innerHTML = niveau.value;
+    document.write(niveau);

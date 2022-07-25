@@ -5,7 +5,7 @@
 
 <div class="container">
     <div class="card">
-            <form class="form" action="" method="POST" >
+            <form action="" method="POST" class="form" >
                 @csrf
                 <div class="left-side">
                     <div class="left-heading">
@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="input-div">
                                     <label> Mois d'obtention  <sup>*</sup> </label> <br>
-                                    <select name="mois_obt" id="">
+                                    <select name="mois_obt" id="mois">
                                         <option value="Janvier"> Janvier </option>
                                         <option value="Février"> Février </option>
                                         <option value="Mars"> Mars </option>
@@ -72,23 +72,23 @@
                                 </div>
                                 <div class="input-div">
                                     <label> Année d'obtention <sup>*</sup> </label> <br>
-                                    <input type="year" name="annee_obt" placeholder="XXXX" required require>
+                                    <input type="year" name="annee_obt" id="annee" placeholder="XXXX" required require>
                                 </div>
                             </div>
                             <div class="input-text">
                                 <div class="input-div">
                                     <label for="prenom"> Prénoms <sup>*</sup> </label>
-                                    <input type="text" name="prenom" placeholder="Koffi" required require>
+                                    <input type="text" name="prenom" id="prenom" placeholder="Koffi" required require>
                                 </div>
                                 <div class="input-div">
                                     <label for="nom"> Nom <sup>*</sup> </label>
-                                    <input type="text" name="nom" placeholder="AKAKPO"  required require>
+                                    <input type="text" name="nom" id="nom" placeholder="AKAKPO"  required require>
                                 </div>
                             </div>
                             <div class="input-text">
                                 <div class="input-div">
                                     <label for="sexe"> Sexe <sup>*</sup> </label>
-                                    <select name="sexe">
+                                    <select name="sexe" id="genre">
                                         <option value="Null"> Selectionner </option>
                                         <option value="M">Masculin</option>
                                         <option value="F">Feminin</option>
@@ -96,17 +96,17 @@
                                 </div>
                                 <div class="input-div">
                                     <label> Date de Naissance <sup>*</sup> </label> <br>
-                                    <input name="date_naissance" type="date" required require>
+                                    <input name="date_naissance" type="date" id="date_nais" required require>
                                 </div>
                                 <div class="input-div">
                                     <label> Lieu de Naissance <sup>*</sup> </label>
-                                    <input type="text" name="lieu_naissance" required require>
+                                    <input type="text" name="lieu_naissance" id="lieu_nais" required require>
                                 </div>
                             </div>
                             <div class="input-text">
                                 <div class="input-div">
                                     <label> Série <sup>*</sup> </label>
-                                    <select name="serie">
+                                    <select name="serie" id="serie">
                                         <option value="Null"> Selectionner </option>
                                         <option value="A4">A4</option>
                                         <option value="D">D</option>
@@ -124,15 +124,15 @@
                                 </div>
                                 <div class="input-div">
                                     <label> Centre d'écrit <sup>*</sup> </label>
-                                    <input type="text" name= "centre_ecrit" required require>
+                                    <input type="text" name= "centre_ecrit" id="centre_ecrit" required require>
                                 </div>
                                 <div class="input-div">
                                     <label for="num_table"> Numéro de Table <sup>*</sup> </label>
-                                    <input type="number" name="num_table" required require>
+                                    <input type="number" name="num_table" id="num_table" required require>
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button type="submit" class="next_button">Suivant</button>
+                                <button class="next_button">Suivant</button>
                             </div>
                         </div>
 
@@ -146,31 +146,31 @@
                             <div class="input-text">
                                 <div class="input-div">
                                     <label for="prenom_demande"> Prénoms du demandeur <sup>*</sup> </label>
-                                    <input type="text" name="prenom_dem" placeholder="Koffi" required require>
+                                    <input type="text" name="prenom_dem" id="prenom_dem" placeholder="Koffi" required require>
                                 </div>
                                 <div class="input-div">
                                     <label for="nom_demande"> Nom du demandeur <sup>*</sup> </label>
-                                    <input type="text" name="nom_dem" placeholder="AKAKPO" required require>
+                                    <input type="text" name="nom_dem" id="nom_dem" placeholder="AKAKPO" required require>
                                 </div>
                             </div>
                             <div class="input-text">
                                 <div class="input-div">
                                     <label for="num_tel"> Numéro de Téléphone <sup>*</sup> </label>
-                                    <input type="tel" name="num_tel" required require>
+                                    <input type="tel" name="num_tel" id="num_tel" required require>
                                 </div>
                                 <div class="input-div">
                                     <label for="mail"> Adresse mail </label>
-                                    <input type="mail" name="mail">
+                                    <input type="mail" name="mail" id="mail">
                                 </div>
                             </div>
                             <div class="input-text">
                                 <div class="input-div">
                                     <label> Lieu de résidence <sup>*</sup> </label>
-                                    <input type="text" name="lieu_residence" required require>
+                                    <input type="text" name="lieu_residence" id="lieu_residence" required require>
                                 </div>
                                 <div class="input-div">
                                     <label>Lieu de retrait <sup>*</sup></label>
-                                    <select name="lieu_retrait">
+                                    <select name="lieu_retrait" id="lieu_retrait">
                                         <option value="Null"> Selectionner </option>
                                         <option value="DRE-Savanes">DRE-Savanes (Dapaong)</option>
                                         <option value="DRE-Kara">DRE-Kara (Kara)</option>
@@ -187,7 +187,7 @@
 
                             <div class="buttons button_space">
                                 <button class="back_button">Précédent</button>
-                                <button class="next_button">Suivant</button>
+                                <button id="next_btn2" class="next_button">Suivant</button>
                             </div>
                         </div>
 
@@ -205,7 +205,7 @@
                                             <tbody >
                                                 <tr>
                                                     <th scope="row" width="30">Niveau</th>
-                                                    <td width="70"> {{ Session::get('niveau') }} </td>
+                                                    <td width="70" id="output1"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Session</th>
@@ -251,7 +251,7 @@
 
                             <div class="buttons button_space">
                                 <button class="back_button">Précédent</button>
-                                <button class="next_button">Suivant</button>
+                                <button type="submit" class="next_button">Suivant</button>
                             </div>
                         </div>
 
