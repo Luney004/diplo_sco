@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -132,7 +134,7 @@
                                 </div>
                             </div>
                             <div class="buttons">
-                                <button id="next_btn1" class="next_button">Suivant</button>
+                                <button type="button" id="next_btn1" class="next_button">Suivant</button>
                             </div>
                         </div>
 
@@ -186,8 +188,8 @@
                             </div>
 
                             <div class="buttons button_space">
-                                <button class="back_button">Précédent</button>
-                                <button id="next_btn2" class="next_button">Suivant</button>
+                                <button type="button" class="back_button">Précédent</button>
+                                <button type="button" id="next_btn2" class="next_button">Suivant</button>
                             </div>
                         </div>
 
@@ -204,12 +206,12 @@
                                         <table class="table">
                                             <tbody >
                                                 <tr>
-                                                    <th scope="row" width="30">Niveau</th>
-                                                    <td width="70" id="output1"> </td>
+                                                    <th scope="row" width="70">Niveau</th>
+                                                    <td width="30" id="output1"> </td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Session</th>
-                                                    <td>{{ Session::get('mois_obt') }} {{ Session::get('annee_obt') }}</td>
+                                                    <td id="output2"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Prénoms</th>
@@ -217,31 +219,51 @@
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Nom</th>
-                                                    <td>{{ Session::get('nom') }}</td>
+                                                    <td id="output4"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Sexe</th>
-                                                    <td>{{ Session::get('sexe') }}</td>
+                                                    <td id="output5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Date de naissance</th>
+                                                    <td id="output6"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Lieu de Naissance</th>
+                                                    <td id="output7"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Série</th>
-                                                    <td>{{ Session::get('serie') }}</td>
+                                                    <td id="output8"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Centre d'écrit</th>
+                                                    <td id="output9"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Numéro de Table</th>
-                                                    <td>{{ Session::get('num_table') }}</td>
+                                                    <td id="output10"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Prénoms du demandeur</th>
-                                                    <td>{{ Session::get('niveau') }}</td>
+                                                    <th scope="row">Prénoms du Demandeur</th>
+                                                    <td id="output11"></td>
                                                 </tr>
                                                 <tr>
-                                                    <th scope="row">Nom du demandeur</th>
-                                                    <td>{{ Session::get('niveau') }}</td>
+                                                    <th scope="row">Nom du Demandeur</th>
+                                                    <td id="output12"></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">Numéro de Téléphone</th>
-                                                    <td>{{ Session::get('niveau') }}</td>
+                                                    <td id="output13"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Lieu de résidence</th>
+                                                    <td id="output14"></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">Lieu de retrait</th>
+                                                    <td id="output15"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -250,8 +272,8 @@
                             </div>
 
                             <div class="buttons button_space">
-                                <button class="back_button">Précédent</button>
-                                <button type="submit" class="next_button">Suivant</button>
+                                <button type="button" class="back_button">Précédent</button>
+                                <button type="button" class="next_button">Suivant</button>
                             </div>
                         </div>
 
@@ -259,15 +281,15 @@
                             <small><i class="fa fa-smile-o"></i></small>
                             <div class="text">
                                 <h2>Effectuez le paiement</h2>
-                                <p>Payez par Mobile Money ou par carte bancaire.</p>
                             </div>
                             <p class="directive">* Champs Obligatoires</p>
                             <div class="user_card">
                                 <span> Payer <sup>*</sup> </span>
                                 <input type="text" required require>
+
                             </div>
                             <div class="buttons button_space">
-                                <button class="back_button">Précédent</button>
+                                <button type="button" class="back_button">Précédent</button>
                                 <button type="submit" class="submit_button">Soumettre</button>
                             </div>
                         </div>

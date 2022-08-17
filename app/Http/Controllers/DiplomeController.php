@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Demandeur;
 use App\Models\Diplome;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Session;
 
 class DiplomeController extends Controller
 {
@@ -15,16 +15,6 @@ class DiplomeController extends Controller
     }
     public function askdiplomeSend(Request $request)
     {
-
-        Session::put('niveau', $request->niveau);
-        Session::put('mois_obt', $request->mois_obt);
-        Session::put('annee_obt', $request->annee_obt);
-        Session::put('serie', $request->serie);
-        Session::put('prenom', $request->prenom);
-        Session::put('nom', $request->nom);
-        Session::put('sexe', $request->sexe);
-        Session::put('num_table', $request->num_table);
-
 
         $diplome = new Diplome();
 
@@ -39,12 +29,18 @@ class DiplomeController extends Controller
 
         $diplome->save();
 
+        $demandeur = new Demandeur();
+
+        $demandeur->prenom_dem = $request->prenom_dem;
+        $demandeur->nom_dem = $request->nom_dem;
+        $demandeur->num_tel = $request->num_tel;
+        $demandeur->mail = $request->mail;
+        $demandeur->lieu_residence = $request->lieu_residence;
+        $demandeur->lieu_retrait = $request->lieu_retrait;
+
+        $demandeur->save();
 
 
-
-
-
-       // return view("confirmer");
 
     }
 }

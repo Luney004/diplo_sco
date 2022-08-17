@@ -647,6 +647,7 @@ input[type="text"],[type="date"],[type="number"],[type="tel"],[type="mail"],[typ
 
 /*INFOS*/
 .row {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
