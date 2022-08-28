@@ -14,5 +14,10 @@ class PostController extends Controller
         return view("accueil");
     }
 
+    public function inforeleve()
+    {
+        return view("infosrelevedem");
+    }
+
 
 }

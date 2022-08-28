@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\SuiviController;
 use App\Http\Controllers\ReleveController;
 use App\Http\Controllers\DiplomeController;
+use App\Http\Controllers\Admin\PostController as AdminPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,9 @@ use App\Http\Controllers\DiplomeController;
 |
 */
 
+//Route::post('/demandereleve', [PostController::class, 'askreleve']);
+
+
 Route::get('/', [PostController::class, 'welcome']);
 
 Route::get('/demandediplome', [DiplomeController::class, 'askdiplome']);
@@ -26,4 +30,16 @@ Route::get('/demandereleve', [ReleveController::class, 'askreleve']);
 
 Route::get('/suivi', [SuiviController::class, 'follow']);
 
-//Route::post('/demandereleve', [PostController::class, 'askreleve']);
+/*Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+Route::get('/admin/posts', function () {
+return view('admin.posts.index');
+})->middleware(['auth'])->name('home');*/
+
+  Route::middleware(['auth'])->name('admin.')->prefix('admin')->group(function () {
+  Route::resource('posts', AdminPostController::class);
+  });
+
+require __DIR__.'/auth.php';
